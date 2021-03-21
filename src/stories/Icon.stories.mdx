@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Icon from '../components/icon/Icon';
+
+<Meta title="说明/Icon" component={Icon} />
+
+export const IconTemplate = (args) => {return <>
+<Icon {...args}/>
+</>}
+
+# 使用说明
+一般来说，如果你能在MATERIAL-UI找到你想要的图标，那么你可以不用这个组件。
+
+如果有些图标在MATERIAL-UI上并没有，你可以拷贝 path 属性后面的一串字符串，然后传给Icon 组件，就可以在屏幕上渲染出你想要的图标。
+
+你可以放心这样做，我是基于MATERIAL-UI上的Icon组件做了二次封装，所以不必担心我的 Icon 组件相对于MATERIAL-UI的props 缺失。
+
+# 使用方式
+我拿到了原生 svg 的这串path
+
+```
+M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z
+```
+然后我传给 Icon 组件，就可以了
+
+```tsx
+<Icon path='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/>
+```
+
+<Canvas>
+  <Story name="icon" args={{ 
+      path: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'
+    }}>
+    {IconTemplate.bind({})}
+   </Story>
+</Canvas>
+
