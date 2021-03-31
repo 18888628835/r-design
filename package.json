@@ -31,6 +31,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
+  "homepage": "https://18888628835.github.io/r-design/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -58,6 +59,5 @@
     "@storybook/react": "^6.1.21",
     "@types/classnames": "^2.2.11",
     "@types/styled-components": "^5.1.8"
-  },
-  "proxy": "https://jsonplaceholder.typicode.com/posts"
+  }
 }

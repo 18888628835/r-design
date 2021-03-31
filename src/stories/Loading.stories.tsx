@@ -15,7 +15,9 @@ export default {
 const Loading_default: Story<LoadingProps> = (args) => {
   return (
     <>
-      <Loading flag={true}></Loading>
+      <div style={{ width: "100px", height: "50px" }}>
+        <Loading flag={true}></Loading>
+      </div>
     </>
   );
 };
@@ -25,7 +27,9 @@ LoadingDefault.storyName = "基础样式";
 const Loading_title: Story<LoadingProps> = (args) => {
   return (
     <>
-      <Loading flag={true} title="加载中..."></Loading>
+      <div style={{ width: "100px", height: "50px" }}>
+        <Loading flag={true} title="加载中..."></Loading>
+      </div>
     </>
   );
 };
