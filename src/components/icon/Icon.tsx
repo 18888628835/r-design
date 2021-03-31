@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-
+import React from "react";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import { SvgIconProps } from "@material-ui/core/SvgIcon";
-import styled from "styled-components";
 
 interface BaseIconProps {
   path: string;

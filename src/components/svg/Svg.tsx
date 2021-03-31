@@ -1,7 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import classnames from "classnames";
-const Wrap = styled.svg``;
 
 export interface SvgProps {
   className?: string;
@@ -28,9 +26,9 @@ export const createSvgScript: (rest: Array<string>) => void = (rest) => {
 const SVG: React.FC<SvgProps> = ({ className, style, svgName }) => {
   const classes = classnames("icon", className);
   return (
-    <Wrap className={classes} style={style} aria-hidden="true">
+    <svg className={classes} style={style} aria-hidden="true">
       <use xlinkHref={`#${svgName}`}></use>
-    </Wrap>
+    </svg>
   );
 };
 export default SVG;
