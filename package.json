@@ -32,7 +32,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
-  "homepage": "https://18888628835.github.io/r-design/",
+  "homepage": "https://18888628835.github.io/r-design/storybook-static",
   "eslintConfig": {
     "extends": [
       "react-app",
