@@ -23,7 +23,8 @@ export async function blobDownLoad(
   const { url, ...rest } = axiosConfig;
 
   const origin = window.location.origin; //获取域名和端口号
-  let ENV = origin.includes("localhost") ? "/api" : ""; //判断环境变量,开发环境的proxy下需要加/api
+  const DEV = origin.includes("localhost") || origin.includes("192.168.9"); //个人 IP
+  let ENV = DEV ? "/api" : ""; //判断环境变量,开发环境的proxy下需要加/api
 
   try {
     const response = await axios({
